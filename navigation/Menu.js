@@ -18,13 +18,11 @@ function CustomDrawerContent({
   const insets = useSafeArea();
   const screens = [
     "Home",
-    "Woman",
-    "Man",
-    "Kids",
-    "New Collection",
     "Profile",
+    "Documents",
+    "PDF to Image",
+    "Sign PDF",
     "Settings",
-    "Components"
   ];
   return (
     <Block

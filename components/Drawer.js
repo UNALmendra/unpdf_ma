@@ -1,6 +1,7 @@
 import React from "react";
 import { TouchableOpacity, StyleSheet } from "react-native";
 import { Block, Text, theme } from "galio-framework";
+import { FontAwesome5 } from '@expo/vector-icons';
 
 import Icon from "./Icon";
 import materialTheme from "../constants/Theme";
@@ -28,39 +29,29 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
-      case "Woman":
+      case "Documents":
         return (
           <Icon
             size={16}
-            name="md-woman"
+            name="folder"
             family="ionicon"
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
-      case "Man":
+      case "PDF to Image":
         return (
           <Icon
             size={16}
-            name="man"
+            name="image"
             family="entypo"
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
-      case "Kids":
+      case "Sign PDF":
         return (
-          <Icon
+          <FontAwesome5
             size={16}
-            name="baby"
-            family="GalioExtra"
-            color={focused ? "white" : materialTheme.COLORS.MUTED}
-          />
-        );
-      case "New Collection":
-        return (
-          <Icon
-            size={16}
-            name="grid-on"
-            family="material"
+            name="file-pdf"
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
@@ -79,15 +70,6 @@ class DrawerItem extends React.Component {
             size={16}
             name="gears"
             family="font-awesome"
-            color={focused ? "white" : materialTheme.COLORS.MUTED}
-          />
-        );
-      case "Components":
-        return (
-          <Icon
-            size={16}
-            name="md-switch"
-            family="ionicon"
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
