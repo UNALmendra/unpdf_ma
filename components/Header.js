@@ -50,61 +50,61 @@ class Header extends React.Component {
     return (back ? navigation.goBack() : navigation.openDrawer());
   }
 
-  renderRight = () => {
-    const { white, title, navigation } = this.props;
+  // renderRight = () => {
+  //   const { white, title, navigation } = this.props;
 
-    if (title === 'Title') {
-      return [
-        <ChatButton key='chat-title' navigation={navigation} isWhite={white} />,
-        <BasketButton key='basket-title' navigation={navigation} isWhite={white} />
-      ]
-    }
+  //   if (title === 'Title') {
+  //     return [
+  //       <ChatButton key='chat-title' navigation={navigation} isWhite={white} />,
+  //       <BasketButton key='basket-title' navigation={navigation} isWhite={white} />
+  //     ]
+  //   }
 
-    switch (title) {
-      case 'Home':
-        return ([
-          <ChatButton key='chat-home' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-home' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Deals':
-        return ([
-          <ChatButton key='chat-categories' navigation={navigation} />,
-          <BasketButton key='basket-categories' navigation={navigation} />
-        ]);
-      case 'Categories':
-        return ([
-          <ChatButton key='chat-categories' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-categories' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Category':
-        return ([
-          <ChatButton key='chat-deals' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Profile':
-        return ([
-          <ChatButton key='chat-profile' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Product':
-        return ([
-          <SearchButton key='search-product' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-product' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Search':
-        return ([
-          <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Settings':
-        return ([
-          <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
-        ]);
-      default:
-        break;
-    }
-  }
+  //   // switch (title) {
+  //   //   case 'Home':
+  //   //     return ([
+  //   //       <ChatButton key='chat-home' navigation={navigation} isWhite={white} />,
+  //   //       <BasketButton key='basket-home' navigation={navigation} isWhite={white} />
+  //   //     ]);
+  //   //   case 'Deals':
+  //   //     return ([
+  //   //       <ChatButton key='chat-categories' navigation={navigation} />,
+  //   //       <BasketButton key='basket-categories' navigation={navigation} />
+  //   //     ]);
+  //   //   case 'Categories':
+  //   //     return ([
+  //   //       <ChatButton key='chat-categories' navigation={navigation} isWhite={white} />,
+  //   //       <BasketButton key='basket-categories' navigation={navigation} isWhite={white} />
+  //   //     ]);
+  //   //   case 'Category':
+  //   //     return ([
+  //   //       <ChatButton key='chat-deals' navigation={navigation} isWhite={white} />,
+  //   //       <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
+  //   //     ]);
+  //   //   case 'Profile':
+  //   //     return ([
+  //   //       <ChatButton key='chat-profile' navigation={navigation} isWhite={white} />,
+  //   //       <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
+  //   //     ]);
+  //   //   case 'Product':
+  //   //     return ([
+  //   //       <SearchButton key='search-product' navigation={navigation} isWhite={white} />,
+  //   //       <BasketButton key='basket-product' navigation={navigation} isWhite={white} />
+  //   //     ]);
+  //   //   case 'Search':
+  //   //     return ([
+  //   //       <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
+  //   //       <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
+  //   //     ]);
+  //   //   case 'Settings':
+  //   //     return ([
+  //   //       <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
+  //   //       <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
+  //   //     ]);
+  //   //   default:
+  //   //     break;
+  //   // }
+  // }
 
   renderSearch = () => {
     const { navigation } = this.props;
@@ -120,39 +120,39 @@ class Header extends React.Component {
     )
   }
 
-  renderTabs = () => {
-    const { navigation, tabTitleLeft, tabTitleRight } = this.props;
+  // renderTabs = () => {
+  //   const { navigation, tabTitleLeft, tabTitleRight } = this.props;
 
-    return (
-      <Block row style={styles.tabs}>
-        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Pro')}>
-          <Block row middle>
-            <Icon name="grid" family="feather" style={{ paddingRight: 8 }} />
-            <Text size={16} style={styles.tabTitle}>{tabTitleLeft || 'Categories'}</Text>
-          </Block>
-        </Button>
-        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
-          <Block row middle>
-            <Icon size={16} name="camera-18" family="GalioExtra" style={{ paddingRight: 8 }} />
-            <Text size={16} style={styles.tabTitle}>{tabTitleRight || 'Best Deals'}</Text>
-          </Block>
-        </Button>
-      </Block>
-    )
-  }
+  //   return (
+  //     <Block row style={styles.tabs}>
+  //       <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Pro')}>
+  //         <Block row middle>
+  //           <Icon name="grid" family="feather" style={{ paddingRight: 8 }} />
+  //           <Text size={16} style={styles.tabTitle}>{tabTitleLeft || 'Categories'}</Text>
+  //         </Block>
+  //       </Button>
+  //       <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
+  //         <Block row middle>
+  //           <Icon size={16} name="camera-18" family="GalioExtra" style={{ paddingRight: 8 }} />
+  //           <Text size={16} style={styles.tabTitle}>{tabTitleRight || 'Best Deals'}</Text>
+  //         </Block>
+  //       </Button>
+  //     </Block>
+  //   )
+  // }
 
-  renderHeader = () => {
-    const { search, tabs } = this.props;
-    if (search || tabs) {
-      return (
-        <Block center>
-          {search ? this.renderSearch() : null}
-          {tabs ? this.renderTabs() : null}
-        </Block>
-      )
-    }
-    return null;
-  }
+  // renderHeader = () => {
+  //   const { search, tabs } = this.props;
+  //   if (search || tabs) {
+  //     return (
+  //       <Block center>
+  //         {search ? this.renderSearch() : null}
+  //         {tabs ? this.renderTabs() : null}
+  //       </Block>
+  //     )
+  //   }
+  //   return null;
+  // }
 
   render() {
     const { back, title, white, transparent, navigation } = this.props;
@@ -165,12 +165,12 @@ class Header extends React.Component {
 
     return (
       <Block style={headerStyles}>
-        <NavBar
+        {/* <NavBar
           back={back}
           title={title}
           style={styles.navbar}
           transparent={transparent}
-          right={this.renderRight()}
+          // right={this.renderRight()}
           rightStyle={{ alignItems: 'center' }}
           leftStyle={{ flex: 0.3, paddingTop: 2  }}
           leftIconName={(back ? 'chevron-left' : 'navicon')}
@@ -180,8 +180,8 @@ class Header extends React.Component {
             {color: theme.COLORS[white ? 'WHITE' : 'ICON']},
           ]}
           onLeftPress={this.handleLeftPress}
-        />
-        {this.renderHeader()}
+        /> */}
+        {/* {this.renderHeader()} */}
       </Block>
     );
   }

@@ -9,6 +9,7 @@ import products from '../constants/products';
 
 export default class Home extends React.Component {
 
+
   renderProducts = () => {
     return (
       <ScrollView
@@ -17,6 +18,7 @@ export default class Home extends React.Component {
         <Block flex>
           <Product product={products[0]} full />
           <Product product={products[1]} full />
+          <Product product={products[2]} full />
         </Block>
       </ScrollView>
     )

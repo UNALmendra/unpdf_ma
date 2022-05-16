@@ -8,4 +8,8 @@ export default [
     title: 'Convert PNG to PDF',
     image: 'https://pngpdf.com/assets/img/png-to-pdf.png',
   },
+  {
+    title: 'Sign PDF',
+    image: 'https://pngpdf.com/assets/img/png-to-pdf.png',
+  },
 ];
